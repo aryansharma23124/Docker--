@@ -1,0 +1,14 @@
+#Check If Docker is Correctly Installed or not
+docker run hello-world
+
+#Build Ur Image.The Image will be tagged by the name my-httpd
+docker build -t my-httpd
+
+
+#list all the images in your Machine
+docker images
+
+
+#Now We will run an image inside the container
+#-p for port if we put -P we will it will automaticaaly assign a port
+docker run -itd --name my-http-container-1 -p 5555:80 my-httpd:latest
